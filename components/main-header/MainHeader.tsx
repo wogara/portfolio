@@ -23,9 +23,9 @@ export default function MainHeader() {
 
   return (
     <div>
-      <nav className="bg-base border-b-2 border-white p-4 fixed top-0 left-0 w-full z-50">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="text-white text-2xl p-3" onClick={closeMenu}>
+      <nav className="bg-mantle border-b-2 border-mantle p-4 fixed top-0 left-0 w-full z-50">
+        <div className="flex items-center justify-center">
+          <Link href="/" className="text-blue text-2xl p-3" onClick={closeMenu}>
             BILLY
           </Link>
           <div className="md:hidden">
@@ -40,7 +40,7 @@ export default function MainHeader() {
             <li>
               <Link
                 href="/projects"
-                className={`text-white text-xl hover:text-gray-400 p-3${isActive('/projects')}`}
+                className={`text-peach text-xl hover:text-gray-400 p-3${isActive('/projects')}`}
               >
                 PROJECTS
               </Link>
@@ -48,7 +48,7 @@ export default function MainHeader() {
             <li>
               <Link
                 href="/blog"
-                className={`text-white text-xl hover:text-gray-400 p-3${isActive('/blog')}`}
+                className={`text-green text-xl hover:text-gray-400 p-3${isActive('/blog')}`}
               >
                 BLOG
               </Link>
@@ -56,7 +56,7 @@ export default function MainHeader() {
             <li>
               <Link
                 href="/about"
-                className={`text-white text-xl hover:text-gray-400 p-3${isActive('/about')}`}
+                className={`text-red text-xl hover:text-gray-400 p-3${isActive('/about')}`}
               >
                 ABOUT
               </Link>

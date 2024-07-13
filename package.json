@@ -9,18 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/material": "^5.16.1",
+    "chess.js": "^1.0.0-beta.8",
+    "next": "14.2.4",
     "react": "^18",
+    "react-chessboard": "^4.6.0",
     "react-dom": "^18",
-    "next": "14.2.4"
+    "react-draggable": "^4.4.6",
+    "react-fontawesome": "^1.7.1",
+    "react-modal-resizable-draggable": "^0.1.6"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "typescript": "^5"
   }
 }
