@@ -3,6 +3,8 @@ import { useEffect, useState, useRef, useCallback } from "react";
 const useStockfish = () => {
   const [evaluation, setEvaluation] = useState(0);
   const [bestMove, setBestMove] = useState("");
+
+  console.log("STOCKFISH BEST MOVE: " + bestMove);
   const workerRef = useRef<Worker | null>(null);
   function normalizeChessScore(scoreCp: number) {
     const MAX_CP = 300; // Maximum cp for normalization
@@ -16,6 +18,9 @@ const useStockfish = () => {
       return (scoreCp / MAX_CP) * 100;
     }
   }
+
+  //input: stockfish event data
+  //output: void - updates score and best move
   const parseStockfishOutput = (data: string) => {
     // Adjusted regex to capture both positive and negative scores
     const scoreMatch = data.match(/score cp (-?\d+)/);

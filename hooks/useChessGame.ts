@@ -3,10 +3,11 @@ import { Chess } from "chess.js";
 import useStockfish from "./useStockfish";
 import { BoardOrientation } from "@/types/chess";
 
-const useChessGame = (playerColor: BoardOrientation, difficulty: number) => {
+const useChessGame = (playerColor: BoardOrientation, difficulty: number, clearHint: () => void) => {
   const [game, setGame] = useState(new Chess());
   const { bestMove, sendCommand } = useStockfish();
-  const [resetState, setResetState] = useState<boolean>(true)
+  console.log("USE CHESS GAME BEST MOVE: " + bestMove);
+  const [resetState, setResetState] = useState<boolean>(true);
   const bestMoveRef = useRef(bestMove);
   useEffect(() => {
     bestMoveRef.current = bestMove;
@@ -87,16 +88,17 @@ const useChessGame = (playerColor: BoardOrientation, difficulty: number) => {
         if (move === null) {
           return false;
         }
+        clearHint();
         sendCommand(`position fen ${game.fen()}`);
         sendCommand("go depth 20");
         setTimeout(() => {
           let randomNum = Math.random() * 10;
           console.log(randomNum);
           if (randomNum < 10 - difficulty) {
-            console.log('rand');
+            console.log("rand");
             makeRandomMove();
           } else {
-            console.log('stockfish');
+            console.log("stockfish");
             const stockfishMove = bestMoveRef.current;
             if (stockfishMove) {
               const from = stockfishMove.slice(0, 2);
@@ -114,7 +116,7 @@ const useChessGame = (playerColor: BoardOrientation, difficulty: number) => {
     [game, makeAMove, playerColor],
   );
 
-  return { getCurrentGame, makeAMove, onDrop, resetGame };
+  return { getCurrentGame, makeAMove, onDrop, resetGame, bestMove };
 };
 
 export default useChessGame;

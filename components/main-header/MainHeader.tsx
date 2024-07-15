@@ -1,16 +1,15 @@
 'use client';
-
-import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function MainHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const currentPath = usePathname();
 
-  const isActive = (path:string) => {
-    return currentPath === path ? ' border border-white' : '';
+  const isActive = (path: string) => {
+    return currentPath === path ? " border border-white" : "";
   };
 
   const toggleMenu = () => {
@@ -31,7 +30,7 @@ export default function MainHeader() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className={`burger-menu text-white hover:text-gray-400 p-2 border border-white rounded ${isMenuOpen ? 'open' : ''}`}
+              className={`burger-menu text-white hover:text-gray-400 p-2 border border-white rounded ${isMenuOpen ? "open" : ""}`}
             >
               ☰
             </button>
@@ -40,7 +39,7 @@ export default function MainHeader() {
             <li>
               <Link
                 href="/projects"
-                className={`text-peach text-xl hover:text-gray-400 p-3${isActive('/projects')}`}
+                className={`text-peach text-xl hover:text-gray-400 p-3${isActive("/projects")}`}
               >
                 PROJECTS
               </Link>
@@ -48,7 +47,7 @@ export default function MainHeader() {
             <li>
               <Link
                 href="/blog"
-                className={`text-green text-xl hover:text-gray-400 p-3${isActive('/blog')}`}
+                className={`text-green text-xl hover:text-gray-400 p-3${isActive("/blog")}`}
               >
                 BLOG
               </Link>
@@ -56,7 +55,7 @@ export default function MainHeader() {
             <li>
               <Link
                 href="/about"
-                className={`text-red text-xl hover:text-gray-400 p-3${isActive('/about')}`}
+                className={`text-red text-xl hover:text-gray-400 p-3${isActive("/about")}`}
               >
                 ABOUT
               </Link>
@@ -69,7 +68,7 @@ export default function MainHeader() {
               <li>
                 <Link
                   href="/projects"
-                  className={`text-white text-xl hover:text-gray-400 p-3${isActive('/projects')}`}
+                  className={`text-white text-xl hover:text-gray-400 p-3${isActive("/projects")}`}
                   onClick={closeMenu}
                 >
                   PROJECTS
@@ -78,7 +77,7 @@ export default function MainHeader() {
               <li>
                 <Link
                   href="/blog"
-                  className={`text-white text-xl hover:text-gray-400 p-3${isActive('/blog')}`}
+                  className={`text-white text-xl hover:text-gray-400 p-3${isActive("/blog")}`}
                   onClick={closeMenu}
                 >
                   BLOG
@@ -87,7 +86,7 @@ export default function MainHeader() {
               <li>
                 <Link
                   href="/about"
-                  className={`text-white text-xl hover:text-gray-400 p-3${isActive('/about')}`}
+                  className={`text-white text-xl hover:text-gray-400 p-3${isActive("/about")}`}
                   onClick={closeMenu}
                 >
                   ABOUT

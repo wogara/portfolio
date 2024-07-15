@@ -2,6 +2,7 @@ import { Chessboard } from "react-chessboard";
 import useChessGame from "../../hooks/useChessGame";
 import { useState } from "react";
 import { BoardOrientation } from "@/types/chess";
+import { Arrow } from "@/types/chess";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faToggleOn,
@@ -14,11 +15,22 @@ import { colors } from "../../utils/colors";
 export default function ChessGame() {
   const [playerColor, setPlayerColor] = useState<BoardOrientation>("white");
   const [difficulty, setDifficulty] = useState<number>(0);
+  const [hint, setHint] = useState<boolean>(false);
+  console.log("HINT: " + hint);
+  const [arrow, setArrow] = useState<Arrow[]>(undefined);
 
-  const { getCurrentGame, onDrop, resetGame } = useChessGame(
+  const clearHint = () => {
+    setHint(false);
+    setArrow([[]])
+  };
+
+  const { getCurrentGame, onDrop, resetGame, bestMove } = useChessGame(
     playerColor,
     difficulty,
+    clearHint,
   );
+
+  console.log("CHES GAME BEST MOVE: " + bestMove);
   const currentGame = getCurrentGame();
   const currentFen = currentGame.fen();
 
@@ -27,7 +39,6 @@ export default function ChessGame() {
   };
 
   const flipPlayerColor = () => {
-    console.log("FLIP");
     if (playerColor === "white") {
       resetGame();
       setPlayerColor("black");
@@ -35,6 +46,17 @@ export default function ChessGame() {
       resetGame();
       setPlayerColor("white");
     }
+  };
+  const createArrow = (bestMove: string) => {
+    const fromSquare = bestMove.slice(0,2);
+    const toSquare = bestMove.slice(2);
+
+    setArrow([fromSquare, toSquare] as Arrow)
+  }
+  const flipHint = () => {
+    hint ? setHint(false) : setHint(true);
+    createArrow(bestMove);
+    
   };
 
   return (
@@ -56,6 +78,12 @@ export default function ChessGame() {
         >
           <FontAwesomeIcon icon={faArrowRotateRight} />
         </button>
+        <button
+          onClick={() => flipHint()}
+          className="z-50 p-2 bg-gray text-white rounded"
+        >
+          ?
+        </button>
       </div>
       <Chessboard
         position={currentFen}
@@ -64,6 +92,7 @@ export default function ChessGame() {
         customBoardStyle={{}}
         customDarkSquareStyle={{ backgroundColor: colors.surface2 }}
         customLightSquareStyle={{ backgroundColor: colors.surface0 }}
+        customArrows={arrow}
       />
     </div>
   );

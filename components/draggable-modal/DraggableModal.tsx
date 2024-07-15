@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 interface DraggableModalProps {
   isVisible: boolean;
@@ -16,25 +16,20 @@ const DraggableModal: React.FC<DraggableModalProps> = ({
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
 
   const onMouseDown = (e: React.MouseEvent) => {
-    console.log("MOUSE DOWN");
     setStartPos({
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     });
     setIsDragging(true);
-    console.log(e);
   };
 
   const onMouseMove = (e: MouseEvent) => {
-    console.log("MOUSE MOVE");
     if (isDragging) {
       setPosition({ x: e.clientX - startPos.x, y: e.clientY - startPos.y });
     }
   };
 
   const onMouseUp = () => {
-    //  setStartPos(position);
-    console.log("MOUSE UP");
     setIsDragging(false);
     document.removeEventListener("mousemove", onMouseMove);
     document.removeEventListener("mouseup", onMouseUp);
@@ -45,9 +40,6 @@ const DraggableModal: React.FC<DraggableModalProps> = ({
       document.addEventListener("mousemove", onMouseMove);
       document.addEventListener("mouseup", onMouseUp);
     }
-    //document.addEventListener("mousemove", onMouseMove);
-    //document.addEventListener("mouseup", onMouseUp);
-
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
       document.removeEventListener("mouseup", onMouseUp);
@@ -64,7 +56,10 @@ const DraggableModal: React.FC<DraggableModalProps> = ({
         }}
         className="bg-base rounded border border-white shadow-lg relative w-1/4"
       >
-        <div className="bg-green text-mantle p-2 cursor-move" onMouseDown={onMouseDown}>
+        <div
+          className="bg-green text-mantle p-2 cursor-move"
+          onMouseDown={onMouseDown}
+        >
           <button
             onClick={onClose}
             className="absolute top-2 right-2 text-mantle"
@@ -73,7 +68,10 @@ const DraggableModal: React.FC<DraggableModalProps> = ({
           </button>
           Drag Here
         </div>
-        <div className="p-8 position-absolute" onMouseDown={(e) => e.stopPropagation()}>
+        <div
+          className="p-8 position-absolute"
+          onMouseDown={(e) => e.stopPropagation()}
+        >
           {children}
         </div>
       </div>
