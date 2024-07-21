@@ -3,6 +3,15 @@ import CustomCard from "@/components/custom-card/CustomCard";
 const projects = [
   {
     image: "/images/speedtest.png",
+    title: "Custom Internet Speed Test",
+    subtitle: "Client: HR&A Advisors",
+    technologies: "technologies",
+    description: "description",
+    link: "google.com",
+    linkText: "LINKTEXT",
+  },
+  {
+    image: "/images/soulacoasta_cropped.png",
     title: "TITLE",
     subtitle: "SUBTITLE",
     technologies: "technologies",
@@ -11,7 +20,7 @@ const projects = [
     linkText: "LINKTEXT",
   },
   {
-    image: "/images/soulacoasta.png",
+    image: "/images/texas-logo_cropped.png",
     title: "TITLE",
     subtitle: "SUBTITLE",
     technologies: "technologies",
@@ -20,7 +29,7 @@ const projects = [
     linkText: "LINKTEXT",
   },
   {
-    image: "/images/texas-logo.png",
+    image: "/images/ricommerce_cropped.png",
     title: "TITLE",
     subtitle: "SUBTITLE",
     technologies: "technologies",
@@ -29,7 +38,7 @@ const projects = [
     linkText: "LINKTEXT",
   },
   {
-    image: "/images/ricommerce.png",
+    image: "/images/drip-drop-logo_cropped.png",
     title: "TITLE",
     subtitle: "SUBTITLE",
     technologies: "technologies",
@@ -38,7 +47,16 @@ const projects = [
     linkText: "LINKTEXT",
   },
   {
-    image: "/images/drip-drop.png",
+    image: "/images/colorgame_cropped.png",
+    title: "TITLE",
+    subtitle: "SUBTITLE",
+    technologies: "technologies",
+    description: "description",
+    link: "google.com",
+    linkText: "LINKTEXT",
+  },
+  {
+    image: "/images/patatap_cropped.png",
     title: "TITLE",
     subtitle: "SUBTITLE",
     technologies: "technologies",
