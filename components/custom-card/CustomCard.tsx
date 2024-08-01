@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CustomCardProps {
   image: string;
   title: string;
@@ -18,17 +20,17 @@ const CustomCard: React.FC<CustomCardProps> = ({
   linkText,
 }) => {
   return (
-    <div className="max-w-full bg-mantle rounded overflow-hidden shadow-lg m-4 h-96 flex flex-col">
+    <div className="max-w-2xl bg-mantle rounded overflow-hidden shadow-lg m-4 flex flex-col">
       <div className="w-full h-48 overflow-hidden">
-        <img className="w-full h-full object-cover" src={image} alt={title} />
+        <Image className="w-full h-full object-cover" width={500} height={500} src={image} alt={title} />
       </div>
-      <div className="px-6 py-4 flex-grow overflow-hidden">
+      <div className="px-6 py-4 flex-grow">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-text">{subtitle}</p>
         <p className="text-text mt-2">
           <strong>Technologies:</strong> {technologies}
         </p>
-        <p className="text-text text-base mt-2 overflow-hidden overflow-ellipsis">
+        <p className="text-text text-base mt-2">
           {description}
         </p>
       </div>
