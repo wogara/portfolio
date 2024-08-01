@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface CustomCardProps {
   image: string;
   title: string;
-  subtitle: string;
-  technologies: string;
-  description: string;
+  subtitle: ReactNode;
+  technologies: ReactNode;
+  description: ReactNode;
   link: string;
   linkText: string;
 }
@@ -30,9 +31,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
         <p className="text-text mt-2">
           <strong>Technologies:</strong> {technologies}
         </p>
-        <p className="text-text text-base mt-2">
+        <div className="text-text text-base mt-2">
           {description}
-        </p>
+        </div>
       </div>
       <div className="px-6 pt-4 pb-2">
         <a
