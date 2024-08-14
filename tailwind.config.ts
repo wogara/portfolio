@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -41,9 +42,30 @@ const config: Config = {
         mantle: "#181825",
         crust: "#11111b",
       },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-headings': theme('colors.text'),
+            '--tw-prose-body': theme('colors.text'),
+            '--tw-prose-links': theme('colors.blue'),
+            '--tw-prose-bold': theme('colors.green'),
+            '--tw-prose-counters': theme('colors.text'),
+            '--tw-prose-bullets': theme('colors.text'),
+            '--tw-prose-hr': theme('colors.peach'),
+            '--tw-prose-quotes': theme('colors.text'),
+            '--tw-prose-quote-borders': theme('colors.text'),
+            '--tw-prose-captions': theme('colors.text'),
+            '--tw-prose-code': theme('colors.text'),
+            '--tw-prose-pre-code': theme('colors.mantle'),
+            '--tw-prose-pre-bg': theme('colors.blue'),
+            '--tw-prose-th-borders': theme('colors.text'),
+            '--tw-prose-td-borders': theme('colors.text'),
+          }
+        }
+      })
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
 
 export default config;
