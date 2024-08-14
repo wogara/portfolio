@@ -1,8 +1,8 @@
 import { Chessboard } from "react-chessboard";
+import { Arrow, Square } from "react-chessboard/dist/chessboard/types";
 import useChessGame from "../../hooks/useChessGame";
 import { useState } from "react";
 import { BoardOrientation } from "@/types/chess";
-import { ArrowType } from "react-chessboard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faToggleOn,
@@ -17,11 +17,11 @@ export default function ChessGame() {
   const [difficulty, setDifficulty] = useState<number>(0);
   const [hint, setHint] = useState<boolean>(false);
   console.log("HINT: " + hint);
-  const [arrow, setArrow] = useState<ArrowType[]>([['','']]);
+  const [arrow, setArrow] = useState<Arrow[]>([]);
 
   const clearHint = () => {
-   // setHint(false);
-    setArrow([['','']])
+    // setHint(false);
+    setArrow([]);
   };
 
   const { getCurrentGame, onDrop, resetGame, bestMove } = useChessGame(
@@ -48,15 +48,14 @@ export default function ChessGame() {
     }
   };
   const createArrow = (bestMove: string) => {
-    const fromSquare = bestMove.slice(0,2);
+    const fromSquare = bestMove.slice(0, 2);
     const toSquare = bestMove.slice(2);
 
-    setArrow([[fromSquare, toSquare]] as Arrow[])
-  }
+    setArrow([[fromSquare, toSquare]] as Arrow[]);
+  };
   const flipHint = () => {
     hint ? setHint(false) : setHint(true);
     createArrow(bestMove);
-    
   };
 
   return (

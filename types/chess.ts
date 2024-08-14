@@ -1,7 +1,5 @@
 export type BoardOrientation = "white" | "black";
 
-
-export type Arrow = [string, string];
 export type Move = {
   color: string;
   from: string;
