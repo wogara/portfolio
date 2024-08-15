@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlagCheckered, faChess } from "@fortawesome/free-solid-svg-icons";
@@ -34,12 +34,6 @@ export default function MainFooter() {
             className="text-text hover:text-gray-400 p-2 border border-white h-12 w-12 md:h-16 md:w-16 md:text-lg flex items-center justify-center rounded-full"
           >
             <FontAwesomeIcon icon={faChess} size="sm" />
-          </button>
-          <button
-            onClick={openDraggableCheckersModal}
-            className="text-text hover:text-gray-400 p-2 border border-white h-12 w-12 md:h-16 md:w-16 md:text-lg flex items-center justify-center rounded-full"
-          >
-            <FontAwesomeIcon icon={faFlagCheckered} size="sm" />
           </button>
         </div>
       </div>

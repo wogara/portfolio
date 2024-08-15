@@ -46,10 +46,10 @@ export default function MainHeader() {
             </li>
             <li>
               <Link
-                href="/blogs"
-                className={`text-green text-xl hover:text-gray-400 p-3${isActive("/blogs")}`}
+                href="/blog"
+                className={`text-green text-xl hover:text-gray-400 p-3${isActive("/blog")}`}
               >
-                BLOGS
+                BLOG
               </Link>
             </li>
             <li>
