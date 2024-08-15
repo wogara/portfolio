@@ -29,8 +29,6 @@ export async function getBlogData(slug: string): Promise<BlogData> {
 
   const matterResult = matter(fileContents);
   const processedContent = await remark().use(html, {sanitize:false}).process(matterResult.content);
-  console.log("matterResult" + matterResult);
-  console.log('processedContent' + processedContent);
   const contentHtml = processedContent.toString();
 
   return {

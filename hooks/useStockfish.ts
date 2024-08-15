@@ -4,7 +4,6 @@ const useStockfish = () => {
   const [evaluation, setEvaluation] = useState(0);
   const [bestMove, setBestMove] = useState("");
 
-  console.log("STOCKFISH BEST MOVE: " + bestMove);
   const workerRef = useRef<Worker | null>(null);
   function normalizeChessScore(scoreCp: number) {
     const MAX_CP = 300; // Maximum cp for normalization
@@ -39,7 +38,6 @@ const useStockfish = () => {
   useEffect(() => {
     workerRef.current = new Worker("/workers/stockfish-nnue-16-single.js");
     workerRef.current.onmessage = (event) => {
-      //console.log(event);
       parseStockfishOutput(event.data);
     };
 

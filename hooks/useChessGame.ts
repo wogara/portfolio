@@ -3,10 +3,13 @@ import { Chess } from "chess.js";
 import useStockfish from "./useStockfish";
 import { BoardOrientation } from "@/types/chess";
 
-const useChessGame = (playerColor: BoardOrientation, difficulty: number, clearHint: () => void) => {
+const useChessGame = (
+  playerColor: BoardOrientation,
+  difficulty: number,
+  clearHint: () => void,
+) => {
   const [game, setGame] = useState(new Chess());
   const { bestMove, sendCommand } = useStockfish();
-  console.log("USE CHESS GAME BEST MOVE: " + bestMove);
   const [resetState, setResetState] = useState<boolean>(true);
   const bestMoveRef = useRef(bestMove);
   useEffect(() => {
@@ -93,12 +96,9 @@ const useChessGame = (playerColor: BoardOrientation, difficulty: number, clearHi
         sendCommand("go depth 20");
         setTimeout(() => {
           let randomNum = Math.random() * 10;
-          console.log(randomNum);
           if (randomNum < 10 - difficulty) {
-            console.log("rand");
             makeRandomMove();
           } else {
-            console.log("stockfish");
             const stockfishMove = bestMoveRef.current;
             if (stockfishMove) {
               const from = stockfishMove.slice(0, 2);

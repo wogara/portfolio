@@ -16,7 +16,6 @@ export default function ChessGame() {
   const [playerColor, setPlayerColor] = useState<BoardOrientation>("white");
   const [difficulty, setDifficulty] = useState<number>(0);
   const [hint, setHint] = useState<boolean>(false);
-  console.log("HINT: " + hint);
   const [arrow, setArrow] = useState<Arrow[]>([]);
 
   const clearHint = () => {
@@ -30,7 +29,6 @@ export default function ChessGame() {
     clearHint,
   );
 
-  console.log("CHES GAME BEST MOVE: " + bestMove);
   const currentGame = getCurrentGame();
   const currentFen = currentGame.fen();
 

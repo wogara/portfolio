@@ -13,8 +13,6 @@ async function getData(slug: string) {
 export default async function BlogPost({ params }: BlogPostProps) {
   const blogData: BlogData = await getData(params.slug);
 
-  console.log(blogData);
-
   if (!blogData.contentHtml) {
     return (
       <main className="container mx-auto p-4">
