@@ -9,7 +9,7 @@ export default function Home() {
           Hey, I am <span className="text-blue">BILLY</span>, a software engineer specializing in website applications. I also write blogs that you can read here.
         </p>
         <a
-          href="#projects"
+          href="/projects"
           className="bg-text text-mantle hover:bg-peach hover:border-blue hover:text-white py-3 px-6 rounded-full text-lg font-semibold"
         >
           View My Projects
