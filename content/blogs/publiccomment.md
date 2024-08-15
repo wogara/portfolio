@@ -5,13 +5,13 @@ tags: ["tag1", "tag2"]
 ---
 
 
-# Empowering Public Participation: Developing the Texas Digital Opportunity Plan's Public Comment Platform
+# Empowering Public Participation
 
-In the rapidly evolving landscape of digital connectivity, public feedback is invaluable for shaping effective policies. As part of the Texas Digital Opportunity Plan, I had the privilege of collaborating with the Texas Broadband Office to create an interactive public comment platform. This platform played a crucial role in gathering citizen input, helping to enhance digital connectivity across the state.
+In the rapidly evolving landscape of digital connectivity, public feedback is invaluable for shaping effective policies. As part of the Texas Digital Opportunity Plan and Rhode Island Digital Opportunity Plan, I had the privilege of collaborating with the Texas Broadband Office and Rhode Island Commerce office to create an interactive public comment platform. This platform played a crucial role in gathering citizen input, helping to enhance digital connectivity across the state.
 
 ## The Challenge: Engaging Citizens in Digital Policy
 
-The Texas Digital Opportunity Plan aimed to bridge the digital divide and ensure that all Texans had access to reliable internet services. A key element of this initiative was the public comment platform, designed to collect feedback from citizens and stakeholders across the state. The challenge was to create a platform that was both accessible and user-friendly, encouraging widespread participation.
+The Texas Digital Opportunity Plan and Rhode Island Opportunity Plan aimed to bridge the digital divide and ensure that all Texans had access to reliable internet services. A key element of this initiative was the public comment platform, designed to collect feedback from citizens and stakeholders across the state. The challenge was to create a platform that was both accessible and user-friendly, encouraging widespread participation.
 
 ## Key Contributions
 
@@ -33,7 +33,7 @@ To enhance user engagement and provide reassurance, I devised an automated email
 
 ## Impact and Legacy
 
-This multifaceted platform was a cornerstone of the Texas Digital Opportunity Plan, enabling the effective gathering of insights from thousands of participants across the state. The feedback collected played a vital role in informing the development of digital policies and strategies aimed at improving connectivity for all Texans.
+This multifaceted platform was a cornerstone of the Texas Digital Opportunity Plan and the Rhode Island Digital Opportunity Plan, enabling the effective gathering of insights from thousands of participants across the state. The feedback collected played a vital role in informing the development of digital policies and strategies aimed at improving connectivity for all Texans and Rhode Islanders.
 
 ## Confidentiality and Project Closure
 
@@ -41,6 +41,6 @@ Due to the proprietary nature of this project, the source code is not publicly a
 
 ## Conclusion
 
-Working on this project was an incredibly rewarding experience. By facilitating public participation in the Texas Digital Opportunity Plan, we took significant steps toward bridging the digital divide and ensuring that all Texans have the opportunity to connect and thrive in the digital age.
+Working on this project was an incredibly rewarding experience. By facilitating public participation in the Texas Digital Opportunity Plan and Rhode Island Digital Opportunity Plan, we took significant steps toward bridging the digital divide and ensuring that all Texans have the opportunity to connect and thrive in the digital age.
 
 

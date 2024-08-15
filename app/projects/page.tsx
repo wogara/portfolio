@@ -5,7 +5,18 @@ const projects = [
     image: "/images/hra_cropped.png",
     title: "Custom Internet Speed Test",
     subtitle: <span className="italic">Client: HR&A Advisors</span>,
-    technologies: <span>technologies</span>,
+    technologies: (
+      <span>
+        HTML, JavaScript, CSS, SQL,{" "}
+        <a
+          className="text-blue"
+          href="https://github.com/m-lab/ndt7-js"
+          target="_blank"
+        >
+          NDT7 Protocol
+        </a>
+      </span>
+    ),
     description: (
       <>
         <p>
@@ -15,59 +26,91 @@ const projects = [
           digital equity across several states, contributing substantially to
           the broader goal of digital inclusivity.
         </p>
-        <p>
-          Key Contributions: Developed a speed test using ndt7 protocol from
-          M-Lab. Implemented data storage and management in MySQL and AWS S3.
-          Engineered an efficient user interface within a single HTML document
-          using advanced techniques. This tool was pivotal in a statewide survey
-          initiative, utilized across multiple states with thousands of
-          respondents. It played a crucial role in identifying disparities in
-          internet access and informing policy decisions aimed at bridging the
-          digital divide. Due to the proprietary nature of this project, the
-          source code is not publicly available. This ensures the
-          confidentiality and integrity of the specialized solutions provided to
-          the client. This site has been removed.
-        </p>
       </>
     ),
-    link: "google.com",
-    linkText: "LINKTEXT",
+    link: "https://speedtest.hraadvisors.com",
+    linkText: "View Here",
+    blog: "/blog/speedtest",
   },
   {
     image: "/images/soulacoasta_cropped.png",
-    title: "TITLE",
-    subtitle: "SUBTITLE",
-    technologies: "technologies",
-    description: "description",
-    link: "google.com",
-    linkText: "LINKTEXT",
+    title: "Soulacoasta",
+    subtitle: "Artist Landing Page",
+    technologies: "Next.js, Sanity.io, TailwindCSS",
+    description: (
+      <>
+        <p>
+          I developed a dynamic website for Soulacoasta, an artist from Jamaica,
+          to enhance his online presence. The project focused on SEO, a custom
+          music player, and a content management system using Sanity.io,
+          allowing easy updates for shows and visuals. Built with Next.js, the
+          site perfectly reflects Soulacoasta’s brand, connecting him with fans
+          and setting the stage for future growth.
+        </p>
+      </>
+    ),
+    link: "https://soulacoasta.com",
+    linkText: "View Here",
+    blog: "/blog/soulacoasta",
   },
   {
     image: "/images/texas-logo_cropped.png",
-    title: "TITLE",
-    subtitle: "SUBTITLE",
-    technologies: "technologies",
-    description: "description",
-    link: "google.com",
-    linkText: "LINKTEXT",
+    title: "Public Comment Form",
+    subtitle: "Client: Texas Broadband Development Office",
+    technologies: "Node.js, Express, EJS, MySQL, CSS",
+    description: (
+      <>
+        <p>
+          I played a key role in the Texas Digital Opportunity Plan by
+          developing an interactive public comment platform in collaboration
+          with the Texas Broadband Office. The platform, built using Node.js,
+          Express, and MySQL, featured a bilingual user interface and automated
+          email confirmation system. This initiative was crucial in gathering
+          public insights to enhance digital equity across the state.
+        </p>
+      </>
+    ),
+    link: "",
+    linkText: "Project Ended: No Demo Available",
+    blog: "/blogs/publiccomment",
   },
   {
     image: "/images/ricommerce_cropped.png",
-    title: "TITLE",
-    subtitle: "SUBTITLE",
-    technologies: "technologies",
-    description: "description",
-    link: "google.com",
-    linkText: "LINKTEXT",
+    title: "Public Comment Form",
+    subtitle: "Client: Rhode Island Commerce",
+    technologies: "Node.js, Express, EJS, MySQL, CSS",
+    description: (<><p>Similar to Texas, I played a key role in the Rhode Island Digital Opportunity Plan by
+          developing an interactive public comment platform in collaboration
+          with the Rhode Island Commerce office. The platform, built using Node.js,
+          Express, and MySQL, featured a bilingual user interface and automated
+          email confirmation system. This initiative was crucial in gathering
+          public insights to enhance digital equity across the state.
+</p></>),
+    link: "",
+    linkText: "Project Ended: No Demo Available",
+    blog: "/blog/publiccomment",
   },
   {
     image: "/images/drip-drop-logo_cropped.png",
     title: "TITLE",
     subtitle: "SUBTITLE",
     technologies: "technologies",
-    description: "description",
-    link: "google.com",
-    linkText: "LINKTEXT",
+    description: (
+      <>
+        <p>
+          I developed a stylish and functional e-commerce website for Drip Drop
+          Apparel, a cutting-edge clothing brand. The site features secure
+          payment processing, real-time order tracking via Google Sheets API,
+          and dynamic cart functionality. With MongoDB for robust data
+          management and seamless email notifications through the Gmail API, the
+          platform embodies the ethos of the brand while delivering a smooth shopping
+          experience.
+        </p>
+      </>
+    ),
+    link: "https://dripdropapparel.com",
+    linkText: "View Here",
+    blog: "/blog/dripdrop",
   },
   {
     image: "/images/colorgame_cropped.png",
@@ -77,6 +120,7 @@ const projects = [
     description: "description",
     link: "google.com",
     linkText: "LINKTEXT",
+    blog: '',
   },
   {
     image: "/images/patatap.png",
@@ -86,6 +130,7 @@ const projects = [
     description: "description",
     link: "google.com",
     linkText: "LINKTEXT",
+    blog: '',
   },
 ];
 
@@ -103,6 +148,7 @@ export default function Projects() {
             description={project.description}
             link={project.link}
             linkText={project.linkText}
+            blog={project.blog}
           />
         ))}
       </section>

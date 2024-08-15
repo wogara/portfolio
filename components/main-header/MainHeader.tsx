@@ -9,7 +9,7 @@ export default function MainHeader() {
   const currentPath = usePathname();
 
   const isActive = (path: string) => {
-    return currentPath === path ? " border border-white" : "";
+    return currentPath.includes(path) ? " border border-white" : "";
   };
 
   const toggleMenu = () => {

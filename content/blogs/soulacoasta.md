@@ -6,7 +6,7 @@ tags: ["tag1", "tag2"]
 
 
 
-<a href="https://example.com" target="_blank">SOULACOASTA.COM</a>
+<a href="https://soulacoasta.com" target="_blank">SOULACOASTA.COM</a>
 
 
 # Procurement

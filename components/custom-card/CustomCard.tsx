@@ -9,6 +9,7 @@ interface CustomCardProps {
   description: ReactNode;
   link: string;
   linkText: string;
+  blog: string;
 }
 
 const CustomCard: React.FC<CustomCardProps> = ({
@@ -19,21 +20,26 @@ const CustomCard: React.FC<CustomCardProps> = ({
   description,
   link,
   linkText,
+  blog,
 }) => {
   return (
     <div className="max-w-2xl bg-mantle rounded overflow-hidden shadow-lg m-4 flex flex-col">
       <div className="w-full h-48 overflow-hidden">
-        <Image className="w-full h-full object-cover" width={500} height={500} src={image} alt={title} />
+        <Image
+          className="w-full h-full object-cover"
+          width={500}
+          height={500}
+          src={image}
+          alt={title}
+        />
       </div>
       <div className="px-6 py-4 flex-grow">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-text">{subtitle}</p>
-        <p className="text-text mt-2">
+        <p className="text-peach mt-2">
           <strong>Technologies:</strong> {technologies}
         </p>
-        <div className="text-text text-base mt-2">
-          {description}
-        </div>
+        <div className="text-mauve text-justify mt-2">{description}</div>
       </div>
       <div className="px-6 pt-4 pb-2">
         <a
@@ -41,6 +47,14 @@ const CustomCard: React.FC<CustomCardProps> = ({
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           {linkText}
+        </a>
+      </div>
+      <div className="px-6 pt-4 pb-2">
+        <a
+          href={blog}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Learn More {blog}
         </a>
       </div>
     </div>
