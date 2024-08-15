@@ -45,17 +45,20 @@ const CustomCard: React.FC<CustomCardProps> = ({
         <a
           href={link}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          target="_blank"
         >
           {linkText}
         </a>
       </div>
       <div className="px-6 pt-4 pb-2">
-        <a
-          href={blog}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Learn More {blog}
-        </a>
+        {blog.length > 0 && (
+          <a
+            href={blog}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Learn More
+          </a>
+        )}
       </div>
     </div>
   );

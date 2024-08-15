@@ -72,7 +72,7 @@ const projects = [
     ),
     link: "",
     linkText: "Project Ended: No Demo Available",
-    blog: "/blogs/publiccomment",
+    blog: "/blog/publiccomment",
   },
   {
     image: "/images/ricommerce_cropped.png",
@@ -92,9 +92,9 @@ const projects = [
   },
   {
     image: "/images/drip-drop-logo_cropped.png",
-    title: "TITLE",
-    subtitle: "SUBTITLE",
-    technologies: "technologies",
+    title: "Clothing Company Website",
+    subtitle: "Client: Drip Drop Apparel",
+    technologies: "Node.js, Express, EJS, MongoDB, Gmail API, Square API",
     description: (
       <>
         <p>
@@ -114,22 +114,22 @@ const projects = [
   },
   {
     image: "/images/colorgame_cropped.png",
-    title: "TITLE",
-    subtitle: "SUBTITLE",
-    technologies: "technologies",
-    description: "description",
-    link: "google.com",
-    linkText: "LINKTEXT",
+    title: "Color Game",
+    subtitle: "Early Project",
+    technologies: "HTML, CSS, JavaScript",
+    description: "Early game I created to develop my skills in HTML/JavaScript/CSS",
+    link: "/static-page/colorGame.html",
+    linkText: "View Here",
     blog: '',
   },
   {
     image: "/images/patatap.png",
-    title: "TITLE",
-    subtitle: "SUBTITLE",
-    technologies: "technologies",
-    description: "description",
-    link: "google.com",
-    linkText: "LINKTEXT",
+    title: "Patatap Clone",
+    subtitle: "Early Project",
+    technologies: "HTML, CSS, JavaScript",
+    description: "Early game I created to develop my skills in HTML/JavaScript/CSS",
+    link: "/static-page/patatap.html",
+    linkText: "View Here",
     blog: '',
   },
 ];
