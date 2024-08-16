@@ -14,7 +14,7 @@ export default async function Blog() {
       <h1 className="text-4xl font-bold text-text text-center mb-8">Blog</h1>
       <ul className="space-y-8">
         {allBlogsData.map(({ slug, date, title, tags }) => (
-          <li key={slug} className="p-6 bg-peach rounded-lg shadow-md">
+          <li key={slug} className="p-6 bg-blue rounded-lg shadow-md">
             <Link href={`/blog/${slug}`}>
                 {title}
             </Link>
