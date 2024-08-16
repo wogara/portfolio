@@ -1,10 +1,8 @@
 ---
 title: "Speedtest"
-date: "2024-01-01"
-tags: ["tag1", "tag2"]
+date: "2024-01-15"
+tags: ["Freelance", "Webdev", "JavaScript"]
 ---
-
-
 
 <a href="https://speedtest.hraadvisors.com" target="_blank">SPEEDTEST.HRAADVISORS.COM</a>
 

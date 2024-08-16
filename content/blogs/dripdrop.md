@@ -1,7 +1,7 @@
 ---
 title: "Drip Drop"
-date: "2024-01-01"
-tags: ["tag1", "tag2"]
+date: "2024-02-14"
+tags: ["Node", "Freelance", "Webdev"]
 ---
 
 <a href="https://dripdropapparel.com" target="_blank">DRIPDROPAPPAREL.COM</a>
