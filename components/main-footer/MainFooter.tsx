@@ -28,7 +28,7 @@ export default function MainFooter() {
   return (
     <div>
       <div className="bg-base p-4 fixed bottom-0 left-0 w-full z-50">
-        <div className="flex justify-center items-center space-x-4">
+        <div className="hidden md:flex justify-center items-center space-x-4">
           <button
             onClick={openDraggableChessModal}
             className="text-text hover:text-gray-400 p-2 border border-white h-12 w-12 md:h-16 md:w-16 md:text-lg flex items-center justify-center rounded-full"
